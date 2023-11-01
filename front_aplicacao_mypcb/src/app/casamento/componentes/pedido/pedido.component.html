@@ -1,0 +1,68 @@
+<h2>Resumo do presente</h2>
+
+<mat-card *ngIf="pedido">
+  <mat-card-content class="p-b-0 m-b-0">
+    <app-item [data]="pedido.presente" (onValueChange)="setValor()" hidebtn="true"></app-item>
+    <mat-divider></mat-divider>
+    <br>
+    <mat-card-title>Remetente</mat-card-title>
+    <mat-card-subtitle>para pagar o presente, primeiro informe os dados do remetente:</mat-card-subtitle>
+    <div class="example-container">
+      <mat-form-field>
+        <mat-label>Digite seu email</mat-label>
+        <input matInput placeholder="nome@examplo.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Digite seu nome</mat-label>
+        <input matInput placeholder="nome completo" (focusout)="verificaSetemPedidoPendente(true)" [formControl]="nome"
+          required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+</mat-card>
+<div class="cartao" *ngIf="isRemetenteInformado()">
+  <h2 style="margin-top: -15px;">recado aos noivos</h2>
+  <textarea class="textbox-lines text" (input)="onTextChange($event.target.value)" [formControl]="menssagem"
+    rows="3"></textarea>
+</div>
+
+<mat-card *ngIf="isRemetenteInformado()">
+  <mat-card-content class="p-b-0 m-b-0">
+    <div>
+      <label>Tipo de pagamento: </label>
+      <mat-radio-group [formControl]="pagamento" (change)="updatePagamento()">
+        <mat-radio-button value="pix">pix</mat-radio-button>
+        <mat-radio-button value="cartao" style="margin-left: 10px;">cartão</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <br>
+    <mat-divider></mat-divider>
+    <br>
+    <div *ngIf="pagamento.value=='pix'">
+      <div class="container">
+        <img style="margin-top: 15px;" src="https://s.glbimg.com/jo/g1/f/original/2011/05/17/qrcode.jpg"
+          alt="" class="blender">
+        <div class="info">
+          <p style="font-size: 12px;text-align: justify;text-align-last: start;hyphens: auto;">
+            Valor do pix:<b style="margin-left: 5px;"> R$ {{val}},00</b>
+            <br> Obs: para facilitar a confirmação do pagamento escreva o email <b>{{email.value}}</b> na menssagem do
+            pix.
+          </p>
+        </div>
+      </div>
+      <button class="gift" style="width: 100%;background-color: gray;margin-bottom: 10px;"
+        [routerLink]="['/', 'pedido']">pix copia e cola</button>
+      <br>
+      <button class="gift quadrat" style="width: 100%;" (click)="finalizaPedido()">depois que pagar click aqui</button>
+      <br>
+    </div>
+    <div *ngIf="pagamento.value!='pix'" style="display: flex;justify-content: center;">
+      <mat-spinner *ngIf="loading" style="scale: 0.5;"></mat-spinner>
+      <div id="wallet_container"></div>
+    </div>
+    <br>
+  </mat-card-content>
+</mat-card>
+<br>

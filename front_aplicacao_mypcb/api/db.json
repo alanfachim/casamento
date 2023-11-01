@@ -1,0 +1,99 @@
+{
+  "presentes": [
+    {
+      "nome": "Liquidificador Pro Maxx 6 1400w Plq1430p Preto Philco 110V",
+      "valor": "R$ 159,10",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQd6GfcCwrQhzOwKFsPViupLmnA4HynF5gMem9W39gJOpXVXLpQdWooLdSW4iNuGMSpYnKZ2xmYIK1lSn6nG5hacPgGdCL_oaLCTzm5Oo3cn8w9aNed60C6&usqp=CAE",
+      "codigo": "123"
+    }
+  ],
+  "pedidos": [
+    {
+      "id": 1,
+      "data": "2021-10-01",
+      "valor": 100,
+      "status": "Pendente",
+      "itens": [
+        {
+          "produto": "Camiseta",
+          "quantidade": 2,
+          "preco": 25
+        },
+        {
+          "produto": "Calça",
+          "quantidade": 1,
+          "preco": 50
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "data": "2021-10-02",
+      "valor": 150,
+      "status": "Entregue",
+      "itens": [
+        {
+          "produto": "Tênis",
+          "quantidade": 1,
+          "preco": 100
+        },
+        {
+          "produto": "Meia",
+          "quantidade": 2,
+          "preco": 25
+        }
+      ]
+    },
+    {
+      "id": "SSS@.ss.com",
+      "email": "SSS@.ss.com",
+      "nome": "ssss",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQd6GfcCwrQhzOwKFsPViupLmnA4HynF5gMem9W39gJOpXVXLpQdWooLdSW4iNuGMSpYnKZ2xmYIK1lSn6nG5hacPgGdCL_oaLCTzm5Oo3cn8w9aNed60C6&usqp=CAE",
+      "valor": "R$ 159,10",
+      "codigo_objeto": "123",
+      "status": "pendente"
+    },
+    {
+      "id": "alanffachim@gmail.com",
+      "email": "alanffachim@gmail.com",
+      "nome": "Alan Fachim",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQd6GfcCwrQhzOwKFsPViupLmnA4HynF5gMem9W39gJOpXVXLpQdWooLdSW4iNuGMSpYnKZ2xmYIK1lSn6nG5hacPgGdCL_oaLCTzm5Oo3cn8w9aNed60C6&usqp=CAE",
+      "valor": "R$ 159,10",
+      "codigo_objeto": "123",
+      "status": "pendente"
+    },
+    {
+      "id": "alan@gmail.com",
+      "email": "alan@gmail.com",
+      "nome": "Alan Fac",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQd6GfcCwrQhzOwKFsPViupLmnA4HynF5gMem9W39gJOpXVXLpQdWooLdSW4iNuGMSpYnKZ2xmYIK1lSn6nG5hacPgGdCL_oaLCTzm5Oo3cn8w9aNed60C6&usqp=CAE",
+      "valor": "R$ 159,10",
+      "codigo_objeto": "123",
+      "status": "pendente",
+      "texto": "Felicidades aos noivos"
+    },
+    {
+      "id": "alanfachim@gmail.com",
+      "email": "alanfachim@gmail.com",
+      "nome": "Alan Fachim",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQd6GfcCwrQhzOwKFsPViupLmnA4HynF5gMem9W39gJOpXVXLpQdWooLdSW4iNuGMSpYnKZ2xmYIK1lSn6nG5hacPgGdCL_oaLCTzm5Oo3cn8w9aNed60C6&usqp=CAE",
+      "valor": "R$ 159,10",
+      "codigo_objeto": "123",
+      "status": "pendente",
+      "texto": "Felicidades aos noivos",
+      "meioPagamento": "pix"
+    },
+    {
+      "id": "alanf@gmail.com",
+      "email": "alanf@gmail.com",
+      "nome": "Alan Fachim",
+      "imagem": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQd6GfcCwrQhzOwKFsPViupLmnA4HynF5gMem9W39gJOpXVXLpQdWooLdSW4iNuGMSpYnKZ2xmYIK1lSn6nG5hacPgGdCL_oaLCTzm5Oo3cn8w9aNed60C6&usqp=CAE",
+      "valor": "R$ 159,10",
+      "nome_produto": "Liquidificador Pro Maxx 6 1400w Plq1430p Preto Philco 110V",
+      "codigo_objeto": "123",
+      "status": "finalizado",
+      "texto": "sucesso aos noivos",
+      "meioPagamento": "pix"
+    }
+  ]
+}

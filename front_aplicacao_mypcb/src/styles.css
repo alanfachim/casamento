@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: lato;
+  src: url(assets/fonts/LucythecatRegular-R7mA.otf) format("opentype");
+}
+@font-face {
+  font-family: 'Canela Web';
+  src: url("assets/fonts/Canela-Thin-Web-f8f815bf.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal
+}
+
+@font-face {
+  font-family: 'calibre';
+  src: url("assets/fonts/CalibreWeb-Regular-01679dc9.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal
+}
+
+
+@font-face {
+  font-family: 'calibre';
+  src: url("assets/fonts/CalibreWeb-Light-2ff84cb7.woff") format("woff");
+  font-weight: 300;
+  font-style: normal
+}
+
+input{
+  border: 0px in !important;
+}
+
+
+#timer {
+  color: red;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: .7em;
+  letter-spacing: 5px;
+  margin-top: 25%;
+}
+
+.days, .hours, .minutes, .seconds {
+  display: inline-block;
+  padding: 20px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.days {
+  background: red;
+}
+
+.hours {
+  background: white;
+  color: red;
+}
+
+.minutes {
+  background: blue  ;
+}
+
+.seconds {
+  background: yellow;
+}
+
+.numbers {
+  font-family: 'Courier New', Courier, monospace;
+  color: #000;
+  font-size: 4em;
+}
+
+circle{
+  stroke: gray !important;
+
+}

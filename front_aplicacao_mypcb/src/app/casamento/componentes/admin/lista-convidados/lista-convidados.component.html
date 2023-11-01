@@ -1,0 +1,28 @@
+<div fxLayout="row">
+  <div fxFlex.gt-sm="100%">
+    <mat-card>
+      <mat-card-content class="p-b-0 m-b-0">
+        <mat-card-title>Lista de convidados confirmados</mat-card-title>
+      </mat-card-content>
+      <br>
+      <mat-card-content class="p-t-0">
+        <div *ngFor="let item of convidadosService.lista ">
+          <app-convidado [data]="item"></app-convidado>
+          <mat-divider></mat-divider>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card>
+      <mat-card-content class="p-b-0 m-b-0">
+        <mat-card-title>Lista de convidados pendentes</mat-card-title>
+      </mat-card-content>
+      <br>
+      <mat-card-content class="p-t-0">
+        <div *ngFor="let item of convidadosService.listaPendente">
+          <app-convidado [data]="item" [pendente]="true"></app-convidado>
+          <mat-divider></mat-divider>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

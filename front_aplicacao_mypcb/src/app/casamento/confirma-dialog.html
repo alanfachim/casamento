@@ -1,0 +1,20 @@
+<h3 mat-dialog-title style="text-align: center;margin: 0px;">{{getCadastrado()?'Enviado':'Enviando'}}</h3>
+<div *ngIf="!getCadastrado()" style="
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+">
+  <mat-spinner></mat-spinner>
+</div>
+<br>
+<div *ngIf="getCadastrado()" mat-dialog-content>
+  {{convidadosService.msg}}
+</div>
+<div class="example-container"  *ngIf="habilitaTelefone()">
+<mat-form-field >
+  <mat-label>Digite seu email</mat-label>
+  <input style="border: 0px;" matInput placeholder="(11)99999-99999" [formControl]="tel" required>
+  <mat-error *ngIf="tel.invalid">telefone inválido</mat-error>
+</mat-form-field></div>
+<button *ngIf="habilitaTelefone()" [disabled]="tel.invalid"  [style]="!tel.invalid?'opacity:1':'opacity:0.3'" class="index-rsvp__button" (click)="enviar()" button>enviar</button>
+<button *ngIf="getCadastrado() && !habilitaTelefone()" class="index-rsvp__button" (click)="save('ok')" button mat-dialog-close>ok</button>

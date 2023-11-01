@@ -1,0 +1,28 @@
+
+<mat-card>
+  <mat-card-content class="p-b-0 m-b-0">
+    <br>
+    <mat-card-title>Buscar meu presente</mat-card-title>
+    <div class="example-container">
+      <mat-form-field>
+        <mat-label>Digite seu email</mat-label>
+        <input matInput placeholder="nome@examplo.com" [formControl]="email" required>
+      </mat-form-field>
+      <button class="gift" style="width: 100%;margin-bottom: 15px;" (click)="buscar()"    >buscar</button>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="pedido">
+  <mat-card-content class="p-b-0 m-b-0">
+    <br>
+    <mat-card-title>{{pedido.nome}}</mat-card-title>
+    <app-item [data]="pedido.presente" [hidebtn]="true" [hidecota]="true"></app-item>
+    <mat-divider></mat-divider>
+    <br>
+    <div>status do pedido:<b>{{pedido.status}}</b></div>
+    <br>
+    <button *ngIf="pedido.status=='pendente'" class="gift" style="width: 100%;margin-bottom: 15px;"  [routerLink]="['/pedido']" [queryParams]="{id: pedido.email}"  >ir para pagamento</button>
+    <br>
+  </mat-card-content>
+</mat-card>

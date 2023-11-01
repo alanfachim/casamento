@@ -1,0 +1,68 @@
+<div class="container">
+  <mat-icon>
+    person
+  </mat-icon>
+  <div class="info">
+    <h4>{{data?(data.nome | truncate:30):'(sem nome)'}}</h4>
+    <p>{{data.telefone?data.telefone:'(sem valor)'}}</p>
+    <div *ngIf="!pendente">
+      <p>{{data?data.email:'(sem valor)'}}</p>
+      <p class="price">Resposta: {{data?data.resposta=='S'?'confirmado':'recusado':'(sem valor)'}}</p>
+      <p style="display: flex;justify-content: center;align-items: center;">
+        <b style="margin-right: 5px;">
+          {{getLength(data.convidado_extras)}}
+        </b>
+        {{verificaSeTaNaLista(data)}}
+        <span class="material-icons" style="font-size: 22px; margin-left: 5px; color: #c65038;
+      height: 25px;">
+          {{verificaSeTaNaListaicon(data)}}
+        </span>
+      </p>
+      <div>
+        <br>
+        <b style="margin: 10px 0px;">convidados incluidos:</b>
+        <div *ngFor="let incluido of data.convidado_extras ">
+          <p style="margin-left: 10px;">{{incluido}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .container {
+    display: flex;
+    align-items: start;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .blender {
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .price {
+    color: green;
+    font-weight: bold;
+  }
+
+  .gift {
+    background-color: #c65038;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-weight: 600;
+    box-shadow: 1px 1px 5px gray;
+  }
+</style>

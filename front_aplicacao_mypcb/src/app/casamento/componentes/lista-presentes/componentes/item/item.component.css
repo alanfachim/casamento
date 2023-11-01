@@ -1,0 +1,32 @@
+h4 {
+  font-weight: 900;
+  font-size: 14px;
+  margin: 0px 0px 20px 0px;
+}
+
+.selected {
+  opacity: 0.3;
+  filter: blur(1px);
+}
+
+.material-icons {
+  margin-right: 15px;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  color: cadetblue;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  border: 0px;
+  font-size: 30px;
+  background: white;
+  margin: 0px;
+  width: 35px;
+}

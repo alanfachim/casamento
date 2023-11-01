@@ -1,0 +1,237 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Contrato da API de Gerenciamento de Eventos",
+    "version": "1.0.0",
+    "description": "Contrato da API para gerenciamento de presentes, pedidos e convidados em eventos."
+  },
+  "paths": {
+    "/presentes": {
+      "get": {
+        "summary": "Lista todos os presentes",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "getPresentes"
+      },
+      "post": {
+        "summary": "Cria um novo presente",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NovoPresente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Presente criado com sucesso"
+          }
+        },
+        "operationId": "postPresentes"
+      }
+    },
+    "/pedidos": {
+      "get": {
+        "summary": "Lista todos os pedidos",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "getPedidos"
+      },
+      "post": {
+        "summary": "Cria um novo pedido",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NovoPedido"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Pedido criado com sucesso"
+          }
+        },
+        "operationId": "postPedidos"
+      }
+    },
+    "/notifica": {
+      "post": {
+        "summary": "Cria um novo pedido",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Pedido criado com sucesso"
+          }
+        },
+        "operationId": "postNotifica"
+      }
+    },
+    "/pedidos/{id}": {
+      "get": {
+        "summary": "Retorna um pedido específico",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do pedido",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "getPedidosid"
+      },
+      "post": {
+        "summary": "Cria um novo pedido",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do pedido",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NovoPedido"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Pedido criado com sucesso"
+          }
+        },
+        "operationId": "postPedidosid"
+      }
+    },
+    "/pedidos/{id}/payments": {
+      "get": {
+        "summary": "Retorna um pedido específico",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID do pedido",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "getPedidosidpayments"
+      }
+    },
+    "/convidados": {
+      "get": {
+        "summary": "Lista todos os convidados",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "getConvidados"
+      },
+      "post": {
+        "summary": "Cria um novo convidado",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NovoConvidado"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Convidado criado com sucesso"
+          }
+        },
+        "operationId": "postConvidados"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "NovoPresente": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "description": "Nome do presente"
+          },
+          "descricao": {
+            "type": "string",
+            "description": "Descrição do presente"
+          }
+        }
+      },
+      "NovoPedido": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "description": "Nome do pedido"
+          },
+          "quantidade": {
+            "type": "integer",
+            "description": "Quantidade do pedido"
+          }
+        }
+      },
+      "NovoConvidado": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "description": "Nome do convidado"
+          },
+          "idade": {
+            "type": "integer",
+            "description": "Idade do convidado"
+          }
+        }
+      }
+    }
+  }
+}

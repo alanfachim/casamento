@@ -1,0 +1,21 @@
+<div fxLayout="row">
+  <div fxFlex.gt-sm="100%">
+    <mat-card style="margin: 0px;">
+      <mat-card-content class="p-b-0 m-b-0">
+        <mat-card-title>Lista de presentes</mat-card-title>
+        <mat-card-subtitle>aqui estão algumas sugestões de presentes para o nosso casamento, mas lembre-se sua presença já é um presente!</mat-card-subtitle>
+      </mat-card-content>
+      <br>
+      <mat-card-content style="padding: 0px;" *ngIf="(presentesService.listpresentesObj$ | async) as books">
+        <div *ngFor="let item of filter(books) "  >
+
+          <app-item  [data]="getItem(item)"  ></app-item>
+          <mat-divider></mat-divider>
+        </div>
+      </mat-card-content>
+      <mat-card-content class="p-t-0" style="display: flex; justify-content: center;" *ngIf="!(presentesService.listpresentesObj$ | async) as books">
+        <mat-spinner></mat-spinner>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

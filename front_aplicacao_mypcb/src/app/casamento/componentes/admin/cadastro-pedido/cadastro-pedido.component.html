@@ -1,0 +1,26 @@
+<br>
+<mat-card>
+  <mat-card-content class="p-b-0 m-b-0">
+    <mat-card-title>Cadastro de presente</mat-card-title>
+    <div class="example-container">
+      <mat-form-field>
+        <mat-label>Digite o nome do presente</mat-label>
+        <input matInput placeholder="nome@examplo.com" [formControl]="nome" required>
+        <mat-error *ngIf="nome.invalid">nome inválido</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Digite o valor</mat-label>
+        <input matInput placeholder="R$0,00" [formControl]="valor"  required>
+        <mat-error *ngIf="valor.invalid">valor inválido</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Digite a url da imagem</mat-label>
+        <input matInput placeholder="https://" [formControl]="url"  required>
+        <mat-error *ngIf="url.invalid">URL inválida</mat-error>
+      </mat-form-field>
+      <br>
+      <button class="gift " [disabled]="!habilitaConfirmacao()"  style="width: 100%;margin-bottom: 10px;" (click)="cadastrapresente()"    >cadastrar</button>
+
+    </div>
+  </mat-card-content>
+</mat-card>

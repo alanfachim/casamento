@@ -1,0 +1,14 @@
+.gift {
+  background-color: #c65038;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-weight: 600;
+  box-shadow: 1px 1px 5px gray;
+}
+b{
+  margin-left: 10px;
+}

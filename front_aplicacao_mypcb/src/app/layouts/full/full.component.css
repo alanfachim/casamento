@@ -1,0 +1,10 @@
+.mat-toolbar.mat-primary {
+  background: #c65038;
+  color: #fff;
+}
+
+.logo{
+  width: 200px;
+  margin: auto;
+  transform: translateX(-20px);
+}

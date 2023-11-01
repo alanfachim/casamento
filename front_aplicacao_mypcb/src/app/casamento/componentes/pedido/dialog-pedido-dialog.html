@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Atenção</h1>
+<div mat-dialog-content>
+ Existe um pedido pendente para este email deseja continuar com o pagamento?
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="save('nao')">não</button>
+  <button mat-button mat-dialog-close (click)="save('sim')" cdkFocusInitial>sim</button>
+</div>

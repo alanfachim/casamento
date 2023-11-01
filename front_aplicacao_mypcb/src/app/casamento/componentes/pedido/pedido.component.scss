@@ -1,0 +1,99 @@
+h2 {
+  line-height: 36px;
+  font-size: 20px;
+  margin-left: 15px;
+  font-weight: bold;
+}
+.cartao{
+  background-repeat: no-repeat;
+    background-size: contain;
+    height: 143vw;
+    background-image: url("../../../../assets/images/card.jpg");
+    margin: 15px;
+    padding: 12%;
+    box-shadow: 1px 1px 4px gray;
+    background-position-y: 70px;
+    background-color: white;
+}
+.text{
+  margin-top: 40vw;
+  background: rgb(255 255 255 / 4%);
+  border-radius: 7px;
+  height: 70vw;
+  width: 100%;
+  border: 0px;
+}
+
+$fontSize: 17px;
+$lineWidth: 1px;
+$lineColor: #CCC;
+$backgroundColor: #FFF;
+$xPadding: 10px;
+
+.textbox-lines {
+  font-size: $fontSize;
+  border: none;
+  font-family: lato;
+  background-attachment: local;
+  background-image:
+    linear-gradient(to right, $backgroundColor, $backgroundColor $xPadding, transparent $xPadding),
+    linear-gradient(to left, $backgroundColor, $backgroundColor $xPadding, transparent $xPadding),
+    repeating-linear-gradient(
+      $backgroundColor,
+      $backgroundColor $fontSize*2-$lineWidth,
+      $lineColor $fontSize*2-$lineWidth,
+      $lineColor $fontSize*2
+    );
+  line-height: $fontSize*2;
+  padding: $fontSize/3 $xPadding;
+  resize: none;
+}
+
+.container {
+  display: flex;
+  background-color: white;
+  padding: 10px;
+}
+
+.blender {
+  width: 90px;
+  height: 90px;
+  margin-right: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.price {
+  color: green;
+  font-weight: bold;
+}
+
+.gift {
+  background-color: #c65038;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-weight: 600;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.quadrat {
+  color: #fff;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  animation: blinkingBackground 1s infinite;
+}
+
+@keyframes blinkingBackground{
+  0%		{ background-color: #c65038e1;}
+  50%		{ background-color: #860009;}
+  100%	        { background-color: #c65038e1;}
+}
